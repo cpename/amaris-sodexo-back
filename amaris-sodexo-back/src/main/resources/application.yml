@@ -1,0 +1,22 @@
+
+
+spring:
+  external:  
+    server:
+      mock:
+        name: "Comunas-Service-Mock"
+        base-url: "https://private-anon-53deb82188-gonzalobulnes.apiary-mock.com"
+###
+# conexion Base de datos
+###
+  h2:
+    console:
+      enabled: 'true'
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:sodexodb
+    driverClassName: org.h2.Driver
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: 'true'
