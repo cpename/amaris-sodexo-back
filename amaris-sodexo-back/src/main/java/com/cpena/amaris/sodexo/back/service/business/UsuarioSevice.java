@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class UserSevice {
+public class UsuarioSevice {
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cpena.amaris.sodexo.back.service.business.UserSevice;
+import com.cpena.amaris.sodexo.back.service.business.UsuarioSevice;
 import com.cpena.amaris.sodexo.back.service.dtos.UsuarioDto;
 
 import lombok.RequiredArgsConstructor;
@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 public class UserController {
 	
 	@Autowired
-	private final UserSevice usuarioService;
+	private final UsuarioSevice usuarioService;
 	
 	@GetMapping( value = "/usuarios", produces = MediaType.APPLICATION_JSON_VALUE )
 	public ResponseEntity<List<UsuarioDto> > getUsers(){

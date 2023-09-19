@@ -19,4 +19,9 @@ public class ComunaService {
 		return comunaClient.getComunas();
 	}
 	
+	public ComunaDto getComunaByCode( String id ) {
+		
+		return comunaClient.getComunaByCode(id);
+	}
+	
 }

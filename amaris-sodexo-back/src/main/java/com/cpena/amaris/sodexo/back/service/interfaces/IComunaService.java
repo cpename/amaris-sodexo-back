@@ -15,4 +15,7 @@ public interface IComunaService {
 	
 		@GetMapping( value = "/comunas" , consumes = MediaType.APPLICATION_JSON_VALUE)
 		List<ComunaDto> getComunas();
+		
+		@GetMapping( value = "/comunas/{code}", produces = MediaType.APPLICATION_JSON_VALUE )
+		ComunaDto getComunaByCode( String id);
 }

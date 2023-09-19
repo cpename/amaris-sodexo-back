@@ -4,8 +4,7 @@ import lombok.Data;
 
 @Data
 public class ComunaDto {
-	private String name;
-	private String code;
-	private ProvinciaDto contained_in;
+		
+	private ComunaDto comuna;
 	
 }
