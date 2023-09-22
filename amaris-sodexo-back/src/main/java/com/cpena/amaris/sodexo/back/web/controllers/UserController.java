@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cpena.amaris.sodexo.back.service.business.UsuarioSevice;
@@ -20,8 +21,6 @@ import com.cpena.amaris.sodexo.back.service.dtos.UsuarioDto;
 import com.cpena.amaris.sodexo.back.service.dtos.UsuarioUpdateDto;
 
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -59,6 +58,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping(value = "/usuarios/{usuarioId}/delete", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
 	public ResponseEntity<?> borraUsuario(@PathVariable Long usuarioId){
 		usuarioService.borrarUsuario(usuarioId);
 		
