@@ -7,23 +7,24 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.cpena.amaris.sodexo.back.service.business.ComunaService;
 import com.cpena.amaris.sodexo.back.service.dtos.ComunaDto;
 
 import lombok.RequiredArgsConstructor;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 @Validated
 @RequestMapping("/api/v1/comunas")
 public class ComunaController {
 	
 	@Autowired
-	private final ComunaService comunaService;
-
+	private final ComunaService comunaService;	
 	@GetMapping( value = "", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<ComunaDto>> getComunas(){
 		List<ComunaDto> comunasDto = comunaService.getComunas();
